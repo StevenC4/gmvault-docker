@@ -1,7 +1,11 @@
 FROM tianon/gmvault:1.9.1
 
-ENV HOME=/
+VOLUME /root/.gmvault
 
-VOLUME ~/.gmvault
+VOLUME /root/gmvault-db
 
-VOLUME ~/gmvault-db
+VOLUME /root/scripts
+
+ENTRYPOINT /bin/bash
+
+CMD bash
